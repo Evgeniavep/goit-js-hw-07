@@ -17,9 +17,11 @@ const imageList = document.querySelector('#gallery');
 
 const galeryItem = (imgData) => {
   const { url, alt } = imgData ;
-  return `<li><img src="${url}" alt="${alt}" width="350" height="350"></li>`;
+  return `<li><img src="${url}" alt="${alt}" width="250" height="210"></li>`;
 };
 
 const galery = images.map(galeryItem);
 
 imageList.insertAdjacentHTML("beforeend", galery);
+
+imageList.style.display = 'flex';
